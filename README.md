@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+https://mfilliat.github.io/narrative-visualization/
+
 # NarrativeVisualization
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
@@ -29,4 +30,3 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 =======
 # interactive-slideshow
 CS 498 Narrative Visualization
->>>>>>> 7e53a948517d433c1afa66d04d46f3acfd39f5b0
