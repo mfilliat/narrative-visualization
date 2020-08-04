@@ -21,75 +21,6 @@
 
     <div>
       <button mat-flat-button matStepperPrevious color="primary" class="margin-right">Back</button>
-      <button mat-flat-button matStepperNext (click)="nyStart()" color="primary" class="margin-right">Next</button>
-    </div>
-  </mat-step>
-  <mat-step label="New York COVID-19 Impact" >
-    <h1 class="mat-h1 center margin-top">New York</h1>
-    <h1 class="mat-h1 center">{{nyChartDate}}</h1>
-<!--    <span class="matcenter">Hopsitalizations<mat-icon>lens</mat-icon></span>-->
-<!--    <span>-->
-<!--      <svg id="svgOne"></svg> Hospitalizations <svg id="svgTwo"></svg> Deaths-->
-<!--    </span>-->
-    <h3 class="mat-h3 center" *ngIf="nyChartInfo">{{nyChartInfo}}</h3>
-    <div fxLayout="row">
-      <div fxFlex="50">
-        <donut-chart [data]="nyChartData"></donut-chart>
-      </div>
-        <div fxFlex="50">
-          <donut-chart-curr [data]="nyCurrChartData"></donut-chart-curr>
-        </div>
-    </div>
-
-    <div>
-      <button mat-flat-button matStepperPrevious color="primary" class="margin-right">Back</button>
-      <button mat-flat-button (click)="nyContinue()" color="primary" class="margin-right">Continue</button>
-      <button mat-flat-button matStepperNext (click)="califStart()" color="primary" class="margin-right">Next</button>
-    </div>
-  </mat-step>
-  <mat-step label="California COVID-19 Impact">
-    <h1 class="mat-h1 center margin-top">California</h1>
-    <h1 class="mat-h1 center">{{caChartDate}}</h1>
-    <!--    <span class="matcenter">Hopsitalizations<mat-icon>lens</mat-icon></span>-->
-    <!--    <span>-->
-    <!--      <svg id="svgOne"></svg> Hospitalizations <svg id="svgTwo"></svg> Deaths-->
-    <!--    </span>-->
-    <h3 class="mat-h3 center" *ngIf="caChartInfo">{{caChartInfo}}</h3>
-    <div fxLayout="row">
-      <div fxFlex="50">
-        <donut-chart [data]="caChartData"></donut-chart>
-      </div>
-      <div fxFlex="50">
-        <donut-chart-curr [data]="caCurrChartData"></donut-chart-curr>
-      </div>
-    </div>
-
-    <div>
-      <button mat-flat-button matStepperPrevious color="primary" class="margin-right">Back</button>
-      <button mat-flat-button (click)="califContinue()" color="primary" class="margin-right">Continue</button>
-      <button mat-flat-button matStepperNext (click)="txStart()" color="primary" class="margin-right">Next</button>
-    </div>
-  </mat-step>
-  <mat-step label="Texas COVID-19 Impact">
-    <h1 class="mat-h1 center margin-top">Texas</h1>
-    <h1 class="mat-h1 center">{{txChartDate}}</h1>
-    <!--    <span class="matcenter">Hopsitalizations<mat-icon>lens</mat-icon></span>-->
-    <!--    <span>-->
-    <!--      <svg id="svgOne"></svg> Hospitalizations <svg id="svgTwo"></svg> Deaths-->
-    <!--    </span>-->
-    <h3 class="mat-h3 center" *ngIf="txChartInfo">{{txChartInfo}}</h3>
-    <div fxLayout="row">
-      <div fxFlex="50">
-        <donut-chart [data]="txChartData"></donut-chart>
-      </div>
-      <div fxFlex="50">
-        <donut-chart-curr [data]="txCurrChartData"></donut-chart-curr>
-      </div>
-    </div>
-
-    <div>
-      <button mat-flat-button matStepperPrevious color="primary" class="margin-right">Back</button>
-      <button mat-flat-button (click)="txContinue()" color="primary" class="margin-right">Continue</button>
       <button mat-flat-button matStepperNext (click)="flStart()" color="primary" class="margin-right">Next</button>
     </div>
   </mat-step>
@@ -113,6 +44,98 @@
     <div>
       <button mat-flat-button matStepperPrevious color="primary" class="margin-right">Back</button>
       <button mat-flat-button (click)="flContinue()" color="primary" class="margin-right">Continue</button>
+      <button mat-flat-button matStepperNext (click)="txStart()" color="primary" class="margin-right">Next</button>
+    </div>
+  </mat-step>
+  <mat-step label="Texas COVID-19 Impact">
+    <h1 class="mat-h1 center margin-top">Texas</h1>
+    <h1 class="mat-h1 center">{{txChartDate}}</h1>
+    <!--    <span class="matcenter">Hopsitalizations<mat-icon>lens</mat-icon></span>-->
+    <!--    <span>-->
+    <!--      <svg id="svgOne"></svg> Hospitalizations <svg id="svgTwo"></svg> Deaths-->
+    <!--    </span>-->
+    <h3 class="mat-h3 center" *ngIf="txChartInfo">{{txChartInfo}}</h3>
+    <div fxLayout="row">
+      <div fxFlex="50">
+        <donut-chart [data]="txChartData"></donut-chart>
+      </div>
+      <div fxFlex="50">
+        <donut-chart-curr [data]="txCurrChartData"></donut-chart-curr>
+      </div>
+    </div>
+
+    <div>
+      <button mat-flat-button matStepperPrevious color="primary" class="margin-right">Back</button>
+      <button mat-flat-button (click)="txContinue()" color="primary" class="margin-right">Continue</button>
+      <button mat-flat-button matStepperNext (click)="califStart()" color="primary" class="margin-right">Next</button>
+    </div>
+  </mat-step>
+  <mat-step label="California COVID-19 Impact">
+    <h1 class="mat-h1 center margin-top">California</h1>
+    <h1 class="mat-h1 center">{{caChartDate}}</h1>
+    <!--    <span class="matcenter">Hopsitalizations<mat-icon>lens</mat-icon></span>-->
+    <!--    <span>-->
+    <!--      <svg id="svgOne"></svg> Hospitalizations <svg id="svgTwo"></svg> Deaths-->
+    <!--    </span>-->
+    <h3 class="mat-h3 center" *ngIf="caChartInfo">{{caChartInfo}}</h3>
+    <div fxLayout="row">
+      <div fxFlex="50">
+        <donut-chart [data]="caChartData"></donut-chart>
+      </div>
+      <div fxFlex="50">
+        <donut-chart-curr [data]="caCurrChartData"></donut-chart-curr>
+      </div>
+    </div>
+
+    <div>
+      <button mat-flat-button matStepperPrevious color="primary" class="margin-right">Back</button>
+      <button mat-flat-button (click)="califContinue()" color="primary" class="margin-right">Continue</button>
+      <button mat-flat-button matStepperNext (click)="wiStart()" color="primary" class="margin-right">Next</button>
+    </div>
+  </mat-step>
+  <mat-step label="Wisconsin COVID-19 Impact">
+    <h1 class="mat-h1 center margin-top">Wisconsin</h1>
+    <h1 class="mat-h1 center">{{wiChartDate}}</h1>
+    <!--    <span class="matcenter">Hopsitalizations<mat-icon>lens</mat-icon></span>-->
+    <!--    <span>-->
+    <!--      <svg id="svgOne"></svg> Hospitalizations <svg id="svgTwo"></svg> Deaths-->
+    <!--    </span>-->
+    <h3 class="mat-h3 center" *ngIf="wiChartInfo">{{wiChartInfo}}</h3>
+    <div fxLayout="row">
+      <div fxFlex="50">
+        <donut-chart [data]="wiChartData"></donut-chart>
+      </div>
+      <div fxFlex="50">
+        <donut-chart-curr [data]="wiCurrChartData"></donut-chart-curr>
+      </div>
+    </div>
+
+    <div>
+      <button mat-flat-button matStepperPrevious color="primary" class="margin-right">Back</button>
+      <button mat-flat-button (click)="wiContinue()" color="primary" class="margin-right">Continue</button>
+      <button mat-flat-button matStepperNext (click)="nyStart()" color="primary" class="margin-right">Next</button>
+    </div>
+  </mat-step>
+  <mat-step label="New York COVID-19 Impact" >
+    <h1 class="mat-h1 center margin-top">New York</h1>
+    <h1 class="mat-h1 center">{{nyChartDate}}</h1>
+<!--    <span class="matcenter">Hopsitalizations<mat-icon>lens</mat-icon></span>-->
+<!--    <span>-->
+<!--      <svg id="svgOne"></svg> Hospitalizations <svg id="svgTwo"></svg> Deaths-->
+<!--    </span>-->
+    <h3 class="mat-h3 center" *ngIf="nyChartInfo">{{nyChartInfo}}</h3>
+    <div fxLayout="row">
+      <div fxFlex="50">
+        <donut-chart [data]="nyChartData"></donut-chart>
+      </div>
+        <div fxFlex="50">
+          <donut-chart-curr [data]="nyCurrChartData"></donut-chart-curr>
+        </div>
+    </div>
+
+    <div>
+      <button mat-flat-button matStepperPrevious color="primary" class="margin-right">Back</button>
+      <button mat-flat-button (click)="nyContinue()" color="primary" class="margin-right">Continue</button>
       <button mat-flat-button matStepperNext (click)="ilStart()" color="primary" class="margin-right">Next</button>
     </div>
   </mat-step>
@@ -137,29 +160,6 @@
       <button mat-flat-button matStepperPrevious color="primary" class="margin-right">Back</button>
       <button mat-flat-button (click)="ilContinue()" color="primary" class="margin-right">Continue</button>
       <button mat-flat-button matStepperNext (click)="wiStart()" color="primary" class="margin-right">Next</button>
-    </div>
-  </mat-step>
-  <mat-step label="Wisconsin COVID-19 Impact">
-    <h1 class="mat-h1 center margin-top">Wisconsin</h1>
-    <h1 class="mat-h1 center">{{wiChartDate}}</h1>
-    <!--    <span class="matcenter">Hopsitalizations<mat-icon>lens</mat-icon></span>-->
-    <!--    <span>-->
-    <!--      <svg id="svgOne"></svg> Hospitalizations <svg id="svgTwo"></svg> Deaths-->
-    <!--    </span>-->
-    <h3 class="mat-h3 center" *ngIf="wiChartInfo">{{wiChartInfo}}</h3>
-    <div fxLayout="row">
-      <div fxFlex="50">
-        <donut-chart [data]="wiChartData"></donut-chart>
-      </div>
-      <div fxFlex="50">
-        <donut-chart-curr [data]="wiCurrChartData"></donut-chart-curr>
-      </div>
-    </div>
-
-    <div>
-      <button mat-flat-button matStepperPrevious color="primary" class="margin-right">Back</button>
-      <button mat-flat-button (click)="wiContinue()" color="primary" class="margin-right">Continue</button>
-      <button mat-flat-button matStepperNext color="primary" class="margin-right">Next</button>
     </div>
   </mat-step>
   <mat-step label="Done">
