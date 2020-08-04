@@ -18,7 +18,7 @@ export class InteractiveSlideshowVerticalComponent implements OnInit {
     header: true
   };
 
-  nyResults = [];
+  nyResults = { data: []};
   nyBadData: Data[];
   nyData: GoodData[] = [];
   nyWeekData: GoodData[];
@@ -28,7 +28,7 @@ export class InteractiveSlideshowVerticalComponent implements OnInit {
   nyChartDate: string;
   nyChartInfo: string;
 
-  caResults = [];
+  caResults = { data: []};
   caBadData: Data[];
   caData: GoodData[] = [];
   caWeekData: GoodData[];
@@ -38,7 +38,7 @@ export class InteractiveSlideshowVerticalComponent implements OnInit {
   caChartDate: string;
   caChartInfo: string;
 
-  txResults = [];
+  txResults = { data: []};
   txBadData: Data[];
   txData: GoodData[] = [];
   txWeekData: GoodData[];
@@ -48,7 +48,7 @@ export class InteractiveSlideshowVerticalComponent implements OnInit {
   txChartDate: string;
   txChartInfo: string;
 
-  flResults = [];
+  flResults = { data: []};
   flBadData: Data[];
   flData: GoodData[] = [];
   flWeekData: GoodData[];
@@ -58,7 +58,7 @@ export class InteractiveSlideshowVerticalComponent implements OnInit {
   flChartDate: string;
   flChartInfo: string;
 
-  ilResults = [];
+  ilResults = { data: []};
   ilBadData: Data[];
   ilData: GoodData[] = [];
   ilWeekData: GoodData[];
@@ -68,7 +68,7 @@ export class InteractiveSlideshowVerticalComponent implements OnInit {
   ilChartDate: string;
   ilChartInfo: string;
 
-  wiResults = [];
+  wiResults = { data: []};
   wiBadData: Data[];
   wiData: GoodData[] = [];
   wiWeekData: GoodData[];
@@ -82,8 +82,8 @@ export class InteractiveSlideshowVerticalComponent implements OnInit {
 
   constructor(private _snackBar: MatSnackBar) {}
 
-  openSnackBar(message: string, action: string) {
-    this._snackBar.open(message, action, {
+  openSnackBar(message: string): void {
+    this._snackBar.open(message, null, {
       duration: 2000,
     });
   }
